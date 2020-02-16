@@ -24,13 +24,13 @@
             <tr ng-repeat="i in users">
                 <td>{{i.FIRSTNAME}}</td>
                 <td>{{i.LASTNAME}}</td>
-                <td ng-bind="date:'MM/dd/yyyy'">{{i.BIRTHDATE}}</td>
+                <td>{{i.DateNaissance}}</td>
                 <td>{{i.HEIGHT}}</td>
                 <td>
                     <a ng-click="getUser(i)">Edit</a>
                 </td>
                 <td>
-                    <a href="" ng-click="deleteUser(i.id)">Delete</a>
+                    <a ng-click="deleteUser(i)">Delete</a>
                 </td>
             </tr>
         </tbody>

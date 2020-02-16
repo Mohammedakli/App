@@ -42,9 +42,9 @@
                 $scope.users = result;
             });
         }
-        $scope.deleteUser = function (id) {
-            console.log(id)
-            dataService.deleteUser(id).then(function () {
+        $scope.deleteUser = function (user) {
+            console.log(user.ID);
+            dataService.deleteUser(user).then(function () {
                 console.log('success');
                 getData();
             }, function () {

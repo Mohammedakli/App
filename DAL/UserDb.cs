@@ -88,6 +88,7 @@ namespace DAL
                 {
                     oModel = oContext.APP_USER.Find(oId);
                     oContext.APP_USER.Remove(oModel);
+                    oContext.SaveChanges();
                 }
             }
             catch (Exception ex)

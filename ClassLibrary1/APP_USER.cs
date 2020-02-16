@@ -11,7 +11,7 @@ namespace ClassLibrary1
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class APP_USER
     {
         public int ID { get; set; }
@@ -19,5 +19,6 @@ namespace ClassLibrary1
         public string LASTNAME { get; set; }
         public Nullable<System.DateTime> BIRTHDATE { get; set; }
         public Nullable<decimal> HEIGHT { get; set; }
+        public string DateNaissance { get; set; }
     }
 }

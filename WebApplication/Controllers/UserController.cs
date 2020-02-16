@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using WebApplication.Models.EF;
 using ClassLibrary1;
 using System;
+using System.Globalization;
 
 namespace MvcMovie.Controllers
 {
@@ -26,6 +27,10 @@ namespace MvcMovie.Controllers
         {
             UserBll userBll = new UserBll();
             var users = userBll.GetUsers();
+            foreach(var u in users)
+            {
+                u.DateNaissance = u.BIRTHDATE.HasValue ? u.BIRTHDATE.Value.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture) : null;
+            }
             return Json(users, JsonRequestBehavior.AllowGet);
         }
 
@@ -61,12 +66,12 @@ namespace MvcMovie.Controllers
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
         }
-        public JsonResult Delete(int oId)
+        public JsonResult Delete(APP_USER oModel)
         {
             try
             {
                 UserBll userBll = new UserBll();
-                userBll.Delete(oId);
+                userBll.Delete(oModel.ID);
                 var res = true;
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
