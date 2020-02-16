@@ -1,0 +1,43 @@
+﻿<h2>Update</h2>
+<form class="form-horizontal" ng-submit="">
+
+    <h4>Update user</h4>
+    <hr />
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">First name</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" ng-model="user.FIRSTNAME" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Last name</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" ng-model="user.LASTNAME" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Birth date</label>
+        <div class="col-lg-10">
+            <input type="datetime" class="form-control"  ng-model="user.BIRTHDATE" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Height</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" ng-model="user.HEIGHT" />
+
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div class="col-lg-offset-2 col-lg-10">
+            <input type="submit" class="btn btn-success" ng-click="updateUser(user)" />
+            <a href="#/" class="btn btn-default">Cancel</a>
+
+        </div>
+    </div>
+</form>
